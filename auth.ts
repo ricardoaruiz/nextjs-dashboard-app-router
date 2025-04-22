@@ -1,5 +1,5 @@
 import type { User } from "@/app/lib/definitions";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import postgres from "postgres";
