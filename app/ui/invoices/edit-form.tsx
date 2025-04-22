@@ -4,12 +4,12 @@ import { State, updateInvoice } from "@/app/lib/actions";
 import { CustomerField, InvoiceForm } from "@/app/lib/definitions";
 import { Button } from "@/app/ui/button";
 import {
-  AtSymbolIcon,
   CheckIcon,
   ClockIcon,
   CurrencyDollarIcon,
   UserCircleIcon,
 } from "@heroicons/react/24/outline";
+import { LoaderCircle } from "lucide-react";
 import Link from "next/link";
 import { useActionState } from "react";
 
@@ -169,7 +169,7 @@ export default function EditInvoiceForm({
           className="flex gap-2 disabled:opacity-50"
         >
           Edit Invoice
-          {isPending && <AtSymbolIcon className="w-5 animate-spin" />}
+          {isPending && <LoaderCircle className="h-4 w-4 animate-spin" />}
         </Button>
       </div>
     </form>
